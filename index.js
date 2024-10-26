@@ -1,17 +1,10 @@
-function findMatching(drivers, choice) {
-    const lowerCaseChoice = choice.toLowerCase();
-
-    return drivers.filter(driver => driver.toLowerCase() === lowerCaseChoice);
+function findMatching(driverArray, driverChoice) {
+   return driverArray.filter(driver => driver.toLowerCase() === driverChoice.toLowerCase())
 }
 
-
-function fuzzyMatch(drivers, firstLetter) {
-    const lowerCaseLetter = firstLetter.toLowerCase();
-
-    return drivers.filter(driver => driver.toLowerCase().startsWith(lowerCaseLetter));
+function fuzzyMatch(driverArray, firstLetters) {
+    return driverArray.filter(driver => driver.toLowerCase().startsWith(firstLetters.toLowerCase()))
 }
 
-
-function matchName(drivers, name){
-    return drivers.filter(driver => driver.name === name) ;  
-}
+function matchName(driverArray, choice) {
+    return driverArray.filter(driver => driver.name === choice)}
